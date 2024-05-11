@@ -142,13 +142,14 @@ In overview, this repository acts as a digestible module that allows you to crea
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.6 |
+| <a name="requirement_null"></a> [null](#requirement\_null) | ~> 3.1.0 |
 | <a name="requirement_snowflake"></a> [snowflake](#requirement\_snowflake) | ~> 0.90.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_null"></a> [null](#provider\_null) | n/a |
+| <a name="provider_null"></a> [null](#provider\_null) | ~> 3.1.0 |
 | <a name="provider_snowflake"></a> [snowflake](#provider\_snowflake) | ~> 0.90.0 |
 
 ## Modules
@@ -166,7 +167,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_after"></a> [after](#input\_after) | The after condition for the task. | `string` | `""` | no |
+| <a name="input_after"></a> [after](#input\_after) | The predecessor task for the task | `list(string)` | `[]` | no |
 | <a name="input_allow_overlapping_execution"></a> [allow\_overlapping\_execution](#input\_allow\_overlapping\_execution) | Allow overlapping execution setting for the task. | `bool` | `false` | no |
 | <a name="input_comment"></a> [comment](#input\_comment) | The comment for the task. | `string` | `""` | no |
 | <a name="input_database"></a> [database](#input\_database) | The database for the task. | `string` | n/a | yes |
@@ -177,7 +178,6 @@ No modules.
 | <a name="input_session_parameters"></a> [session\_parameters](#input\_session\_parameters) | The session parameters for the task. | `map(string)` | `{}` | no |
 | <a name="input_sql_statement"></a> [sql\_statement](#input\_sql\_statement) | The SQL statement for the task. | `string` | n/a | yes |
 | <a name="input_suspend_task_after_num_failures"></a> [suspend\_task\_after\_num\_failures](#input\_suspend\_task\_after\_num\_failures) | The number of failures after which the task should be suspended. | `number` | `3` | no |
-| <a name="input_under_task_timeout_ms"></a> [under\_task\_timeout\_ms](#input\_under\_task\_timeout\_ms) | The under task timeout in milliseconds. | `number` | `600000` | no |
 | <a name="input_user_task_managed_initial_warehouse_size"></a> [user\_task\_managed\_initial\_warehouse\_size](#input\_user\_task\_managed\_initial\_warehouse\_size) | n/a | `string` | `"small"` | no |
 | <a name="input_warehouse"></a> [warehouse](#input\_warehouse) | The warehouse for the task. | `string` | `null` | no |
 | <a name="input_when"></a> [when](#input\_when) | The when condition for the task. | `string` | `null` | no |
