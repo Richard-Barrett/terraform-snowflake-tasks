@@ -1,7 +1,7 @@
 variable "after" {
-  description = "The after condition for the task."
-  type        = string
-  default     = ""
+  description = "The predecessor task for the task"
+  type        = list(string)
+  default     = []
 }
 
 variable "allow_overlapping_execution" {
@@ -63,12 +63,6 @@ variable "suspend_task_after_num_failures" {
 variable "user_task_managed_initial_warehouse_size" {
   type    = string
   default = "small"
-}
-
-variable "under_task_timeout_ms" {
-  description = "The under task timeout in milliseconds."
-  type        = number
-  default     = 600000
 }
 
 variable "warehouse" {
