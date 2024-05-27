@@ -15,7 +15,7 @@ terraform {
 provider "snowflake" {}
 
 module "snowflake_task" {
-  source = "../.." # Path to the root of the module
+  source        = "../.." # Path to the root of the module
   name          = "my_task"
   database      = "my_database"
   schema        = "my_schema"
